@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dayane & Juna | Laboratório Serverless</title>
+
+  <style>
+    :root {
+      --bg: #111126;
+      --card: #1d1d3b;
+      --purple: #9182ff;
+      --pink: #f4a8d5;
+      --text: #f8f7ff;
+      --muted: #c3c1df;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 24px;
+      display: grid;
+      place-items: center;
+      font-family: system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, #39316b 0, transparent 40%),
+        linear-gradient(135deg, var(--bg), #21172f);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 680px;
+    }
+
+    .card {
+      padding: 36px;
+      border: 1px solid #ffffff20;
+      border-radius: 28px;
+      background: #1d1d3beF;
+      box-shadow: 0 24px 80px #00000035;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+
+    .logo {
+      display: grid;
+      place-items: center;
+      width: 54px;
+      height: 54px;
+      border-radius: 17px;
+      font-size: 27px;
+      background: linear-gradient(135deg, var(--purple), var(--pink));
+    }
+
+    .brand h2 {
+      margin: 0;
+      font-size: 19px;
+    }
+
+    .brand p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .eyebrow {
+      color: var(--pink);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 12px 0;
+      font-size: clamp(32px, 7vw, 48px);
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+    }
+
+    h1 span {
+      color: var(--purple);
+    }
+
+    .description {
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .experiment {
+      padding: 24px;
+      border: 1px solid #ffffff18;
+      border-radius: 20px;
+      background: #ffffff08;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 9px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #ffffff30;
+      border-radius: 12px;
+      outline: none;
+      background: #111126;
+      color: white;
+      font: inherit;
+    }
+
+    input:focus {
+      border-color: var(--purple);
+      box-shadow: 0 0 0 3px #9182ff25;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 14px;
+      padding: 15px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(100deg, var(--purple), #c58bea);
+      color: #17132d;
+      font: inherit;
+      font-weight: 750;
+      cursor: pointer;
+      transition: transform 0.2s, filter 0.2s;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.08);
+    }
+
+    button:focus-visible {
+      outline: 3px solid white;
+      outline-offset: 3px;
+    }
+
+    .result {
+      display: none;
+      margin-top: 20px;
+      padding: 18px;
+      border-radius: 14px;
+      border: 1px solid #9182ff55;
+      background: #9182ff12;
+      line-height: 1.7;
+      overflow-wrap: anywhere;
+    }
+
+    .result.visible {
+      display: block;
+    }
+
+    .result strong {
+      color: var(--pink);
+    }
+
+    .credits {
+      margin-top: 28px;
+      padding-top: 22px;
+      border-top: 1px solid #ffffff20;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .credits strong {
+      color: var(--pink);
+    }
+
+    .tech {
+      margin-top: 12px;
+      color: #aaa6d5;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 14px;
+      }
+
+      .card {
+        padding: 23px;
+      }
+
+      .experiment {
+        padding: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <section class="card">
+
+      <header class="brand">
+        <div class="logo" aria-hidden="true">✦</div>
+        <div>
+          <h2>Dayane & Juna</h2>
+          <p>Laboratório Serverless</p>
+        </div>
+      </header>
+
+      <p class="eyebrow">Nosso primeiro experimento</p>
+
+      <h1>
+        Ideias que viram <span>código.</span>
+      </h1>
+
+      <p class="description">
+        Um espaço para explorar tecnologia, testar ideias
+        e descobrir que aprender programação pode ser uma
+        aventura. Vamos começar?
+      </p>
+
+      <section class="experiment">
+        <h2>✨ Gerador de motivação</h2>
+
+        <p class="description">
+          Digite seu nome e receba uma mensagem para
+          acompanhar sua jornada na tecnologia.
+        </p>
+
+        <form id="message-form">
+          <label for="name">Como podemos te chamar?</label>
+
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Digite seu nome..."
+            maxlength="50"
+            autocomplete="given-name"
+            required
+          >
+
+          <button type="submit">
+            Gerar minha mensagem ✨
+          </button>
+        </form>
+
+        <div
+          id="result"
+          class="result"
+          role="status"
+          aria-live="polite"
+        ></div>
+      </section>
+
+<a href="/sobre" class="botao-sobre">Conheça nossa história →</a>
+
+<style>
+  .botao-sobre {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background: #a99bff;
+    color: #17132d;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .botao-sobre:hover {
+    opacity: 0.85;
+  }
+</style>
+
+     <footer class="credits">
+        <div>Construído com curiosidade e café </div>
+
+        <div>
+          Feito por <strong>Dayane</strong>,
+          com a ajuda da <strong>Juna</strong> 💜
+        </div>
+
+        <div>Um projeto de aprendizado em tecnologia.</div>
+
+        <div class="tech">
+          HTML · CSS · JAVASCRIPT · AWS LAMBDA
+        </div>
+      </footer>
+
+    </section>
+  </main>
+
+  <script>
+    const form = document.querySelector('#message-form');
+    const nameInput = document.querySelector('#name');
+    const result = document.querySelector('#result');
+
+    const messages = [
+      'Cada linha de código é uma oportunidade de aprender.',
+      'Você não precisa saber tudo. Precisa continuar explorando.',
+      'Todo projeto incrível começa com uma primeira tentativa.',
+      'Erros fazem parte do processo. Investigar é aprender!',
+      'Sua curiosidade é uma excelente ferramenta de programação.'
+    ];
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const name = nameInput.value.trim();
+
+      if (!name) {
+        nameInput.focus();
+        return;
+      }
+
+      const index = Math.floor(Math.random() * messages.length);
+
+      const greeting = document.createElement('p');
+      greeting.textContent = `Olá, ${name}! `;
+
+      const message = document.createElement('p');
+      message.textContent = messages[index];
+
+      const signature = document.createElement('strong');
+      signature.textContent = '🚀';
+
+      result.replaceChildren(greeting, message, signature);
+      result.classList.add('visible');
+    });
+  </script>
+</body>
+</html>
