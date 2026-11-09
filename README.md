@@ -66,14 +66,10 @@ Durante o desenvolvimento, estou praticando:
 - Desenvolvimento web com HTML, CSS e JavaScript.
 - Controle de versão com Git e GitHub.
 
-## 👩‍💻 Autora
+## 👩‍💻 Autoria
 
-**Dayane**
+**Dayane em parceria com Juna, assistente de IA do ChatGpt Free**
 
-Estudante de Análise e Desenvolvimento de Sistemas, explorando desenvolvimento de software, computação em nuvem e novas tecnologias.
-
----
-
-⭐ Projeto desenvolvido para fins educacionais e de aprendizado prático.
+⭐ Projeto desenvolvido para fins educacionais e de aprendizado prático juntando conceitos aprendidos na faculdade com IA.
 
 *Curiosidade, código e tecnologia: um passo de cada vez.* 💜
